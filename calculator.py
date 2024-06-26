@@ -30,6 +30,21 @@ button.pack()
 
 
 
+
+
+
+
+
+def select(option):
+    print(option)
+
+
+ttk.Button(calculator, text='Rock', command=lambda: select('Rock')).pack()
+ttk.Button(calculator, text='Paper',command=lambda: select('Paper')).pack()
+ttk.Button(calculator, text='Scissors', command=lambda: select('Scissors')).pack()
+
+
+
 calculator.mainloop()
 
 
