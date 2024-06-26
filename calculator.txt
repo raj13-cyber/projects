@@ -1,1 +1,6 @@
-125452331 raj dlk xjmncbvhjbv
+python3 calculator.py
+
+
+# changing the icon
+img = PhotoImage(file='/home/rajendiran/codes/logo.png')
+calculator.iconphoto(False,img)
