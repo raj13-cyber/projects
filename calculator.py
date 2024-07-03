@@ -25,6 +25,12 @@ Frame.pack()
 ttk.Label(Frame, text="Hello world").grid(row=0, column=0)
 ttk.Button(Frame, text="quit", command=calculator.destroy).grid(column=1,row=1)
 
+calculator.attributes('-topmost',1)
+
+image = PhotoImage(file='/home/rajendiran/codes/logo.png')
+calculator.iconphoto(False,image)
+
+
 
 
 calculator.mainloop()
