@@ -6,11 +6,24 @@ from tkinter import ttk
 
 
 calculator = tk.Tk()
+
 calculator.title()
 calculator.geometry("500x500+100+100")
 
 
-mybutton = Button(calculator, text= "1", fg= 'white', bg= 'green')
+def button_clicked():
+    print('raj has clicked the button')
+
+def select(option):
+    print(option)
+
+
+ttk.Button(calculator, text='Rock', command=lambda: select('Rock')).pack()
+ttk.Button(calculator, text='Paper',command=lambda: select('Paper')).pack()
+ttk.Button(calculator, text='Scissors', command=lambda: select('Scissors')).pack()
+
+
+mybutton = Button(calculator, text= "1", fg= 'white', bg= 'green', command=button_clicked)
 mybutton.pack()
 
 
@@ -25,11 +38,18 @@ Frame.pack()
 ttk.Label(Frame, text="Hello world").grid(row=0, column=0)
 ttk.Button(Frame, text="quit", command=calculator.destroy).grid(column=1,row=1)
 
-calculator.attributes('-topmost',1)
+label_1 = Label(calculator,text="python framework").pack()
+calculator.attributes('-topmost',1)                                        
 
 image = PhotoImage(file='/home/rajendiran/codes/logo.png')
 calculator.iconphoto(False,image)
 
+ttk.Label(calculator, text= 'hi programmer').pack()
+
+
+label = ttk.Label(calculator)
+label['text'] = 'linux os'
+label.pack()
 
 
 
