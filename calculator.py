@@ -7,7 +7,7 @@ from tkinter import ttk
 
 calculator = tk.Tk()
 
-calculator.title()
+calculator.title(text="simple calculator by Raj")
 calculator.geometry("500x500+100+100")
 
 
@@ -47,9 +47,32 @@ calculator.iconphoto(False,image)
 ttk.Label(calculator, text= 'hi programmer').pack()
 
 
-label = ttk.Label(calculator)
-label['text'] = 'linux os'
-label.pack()
+calculator.bind('<Return>',button_clicked)
+
+
+
+
+
+def return_pressed(event):
+    print('Return key pressed.')
+
+
+btn = ttk.Button(calculator, text='Save')
+btn.bind('<Return>','<Deaactivate>', return_pressed)
+
+
+btn.focus()
+btn.pack(expand=True)
+
+
+
+
+
+
+
+
+
+
 
 
 
