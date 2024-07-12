@@ -4,76 +4,22 @@ import tkinter as tk
 from tkinter import ttk
 
 
+login_form = tk.Tk()
+login_form.title("Login")
+login_form.geometry("300x250")
 
-calculator = tk.Tk()
+fields = {}
 
-calculator.title(text="simple calculator by Raj")
-calculator.geometry("500x500+100+100")
+# create user name label 
+fields['username_label'] = ttk.Label(text="User Name")
+fields['username'] = ttk.Entry()
 
+# create password label 
+fields['password_label'] = ttk.Label(text = "Password")
+fields['password'] = ttk.Entry()
 
-def button_clicked():
-    print('raj has clicked the button')
+# loop
+for field in fields.values():
+    field.pack()
 
-def select(option):
-    print(option)
-
-
-ttk.Button(calculator, text='Rock', command=lambda: select('Rock')).pack()
-ttk.Button(calculator, text='Paper',command=lambda: select('Paper')).pack()
-ttk.Button(calculator, text='Scissors', command=lambda: select('Scissors')).pack()
-
-
-mybutton = Button(calculator, text= "1", fg= 'white', bg= 'green', command=button_clicked)
-mybutton.pack()
-
-
-Entry_box= Entry(calculator)
-Entry_box.pack()
-
-Entry_box.insert(0,"enter the proper value")
-
-Frame = ttk.Frame(calculator, padding=10)
-Frame.pack()
-
-ttk.Label(Frame, text="Hello world").grid(row=0, column=0)
-ttk.Button(Frame, text="quit", command=calculator.destroy).grid(column=1,row=1)
-
-label_1 = Label(calculator,text="python framework").pack()
-calculator.attributes('-topmost',1)                                        
-
-image = PhotoImage(file='/home/rajendiran/codes/logo.png')
-calculator.iconphoto(False,image)
-
-ttk.Label(calculator, text= 'hi programmer').pack()
-
-
-calculator.bind('<Return>',button_clicked)
-
-
-
-
-
-def return_pressed(event):
-    print('Return key pressed.')
-
-
-btn = ttk.Button(calculator, text='Save')
-btn.bind('<Return>','<Deaactivate>', return_pressed)
-
-
-btn.focus()
-btn.pack(expand=True)
-
-
-
-
-
-
-
-
-
-
-
-
-
-calculator.mainloop()
+login_form.mainloop()
