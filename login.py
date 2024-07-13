@@ -3,6 +3,7 @@ from tkinter import*
 import tkinter as tk
 from tkinter import ttk
 from tkinter.messagebox  import showinfo
+from tkinter.ttk import*
 
 
 login_form = tk.Tk()
@@ -18,7 +19,7 @@ password=tk.StringVar()
 
 
 def login_clicked():
-    msg= f'you entered {email.get()} and password {password.get()}'
+    msg= f'successful {email.get()}  {password.get()}'
 
     showinfo(
         title = "Login Info",
@@ -38,6 +39,9 @@ fields['password'] = ttk.Entry()
 for field in fields.values():
     field.pack(anchor=tk.W, padx=10, pady=5, fill=tk.X)
 
-ttk.Button(text="Login", command=login_clicked).pack(anchor=tk.W,padx=10, pady=5)
+button=ttk.Button(text="Login", command=login_clicked).pack(anchor=tk.W,padx=10, pady=5)
+
+
 
 login_form.mainloop()
+
