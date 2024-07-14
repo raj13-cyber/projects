@@ -14,7 +14,7 @@ email = tk.StringVar()
 password = tk.StringVar()
 
 
-def login_clicked():
+def raj():
     msg = f'you Entered email {email.get()} and Password {password.get()}'
 
     showinfo(
