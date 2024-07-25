@@ -4,3 +4,7 @@ python3 calculator.py
 # changing the icon
 img = PhotoImage(file='/home/rajendiran/codes/logo.png')
 calculator.iconphoto(False,img)
+
+microphone = tk.Label(search_bar, text='\U0001F3A4',font=("Arial", 10)).pack()
+
+python3 flipkart.py

@@ -39,7 +39,7 @@ fields['password'] = ttk.Entry()
 for field in fields.values():
     field.pack(anchor=tk.W, padx=10, pady=5, fill=tk.X)
 
-button=ttk.Button(text="Login", command=login_clicked).pack(anchor=tk.W,padx=10, pady=5)
+button=ttk.Button(text="Login", command=login_clicked).pack(anchor=tk.W,padx=10, pady=5,)
 
 
 

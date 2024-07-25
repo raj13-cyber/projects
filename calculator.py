@@ -1,25 +1,11 @@
-# import tkinter module and Tk themed widgets(old and new)
-from tkinter import *
 import tkinter as tk
-from tkinter import ttk
 
+root = tk.Tk()
+root.title("Microphone Symbol")
 
-login_form = tk.Tk()
-login_form.title("Login")
-login_form.geometry("300x250")
+# Create a label with the microphone symbol
+microphone_label = tk.Label(root, text="\U0001F3A4", font=("Arial", 50))
+microphone_label.pack()
 
-fields = {}
+root.mainloop()
 
-# create user name label 
-fields['username_label'] = ttk.Label(text="User Name")
-fields['username'] = ttk.Entry()
-
-# create password label 
-fields['password_label'] = ttk.Label(text = "Password")
-fields['password'] = ttk.Entry()
-
-# loop
-for field in fields.values():
-    field.pack()
-
-login_form.mainloop()
