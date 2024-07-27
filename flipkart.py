@@ -1,52 +1,40 @@
 from tkinter import *
 import tkinter as tk 
-from tkinter import ttk 
-from tkinter.ttk import*
+from tkinter import ttk
 
 
+# main window
+window = Tk()
+window.title("flipkart.com")
+window.geometry("500x600")
+window.config(bg="#D2B48C")
 
+#lables
 
-# create window 
-window = tk.Tk()
-window.title("Flipkart")
-window.geometry("340x480")
-window.resizable(True,True)
+# searchbar=Entry()
+# searchbar.pack(side='left', anchor="n",padx=20, pady=10, ipadx=80,ipady=5)
 
-window.config(bg='#ffe8ca',borderwidth=5)
-
-
-# icon change
-img = PhotoImage(file='/home/rajendiran/projects/codes/flipkart.png')
-window.iconphoto(False,img)
-
-# label create 
-search_bar = Entry()
-search_bar.insert(1, "please Enter url here")
-footer=ttk.Frame(window, height=30)
-
-# images
 mic_image = PhotoImage(file='mic.png')
-camera_image = PhotoImage(file='camera.png')
-home_image = PhotoImage(file='account.png')
-                                      
-                    
-# #Buttons
-mic_button = tk.Button(window, width=100, height=100, image=mic_image, cursor='hand2')
-camera_button = tk.Button(window, width=100, height=100, image=camera_image,  cursor='hand2')
-home_button = tk.Button(window,width=100, height=100, image=home_image, cursor='hand2')
 
-# pack geometry
-search_bar.pack(fill='x', ipadx=40, ipady=3, pady=20)
-footer.pack(side=BOTTOM, fill='both', ipady=10)
-
-mic_button.pack(ipadx=200, ipady=200)
-camera_button.pack(ipadx=200,ipady=200)
-home_button.pack(ipadx=2,ipady=200)
+mic_button = Button(window, image=mic_image, height=40, width=40, cursor='hand2')
+mic_button.place(x=400, y=0)
 
 
 
 
 
+home_button = Button(window,text="Home", height=2, width=5, font=(family='aerial', 15, 'bold')border=0, cursor='hand2')
+home_button.pack(side='left',anchor='sw',padx=20)
+                 
+explore_buttton = Button(window, text="explore", height=2, border=0, width=5,cursor='hand2')
+explore_buttton.pack(side='left', anchor='sw',padx=20)
+
+account=Button(window, text="Account", height=2, width=5, border=0,cursor='hand2')
+account.pack(side='left',anchor='se',padx=20)
+
+cart_button = Button(window, text="cart", height=2, width=5, border=0,cursor='hand2')
+cart_button.pack(side='left',anchor='se',padx=20)
+                     
 
 
 window.mainloop()
