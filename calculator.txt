@@ -1,10 +1,43 @@
-python3 calculator.py
+# Create a function that will take two numbers as parameters
+# Next, Inside a function, multiply two numbers and save their product in a product variable
+# Next, use the if condition to check if the product >1000. If yes, return the product
+# Otherwise, use the else block to calculate the sum of two numbers and return it
+
+def calculation(num1, num2):
+    product = num1 * num2
+    if product <= 1000:
+        return product
+    else:
+      return  num1 + num2
+    
+# first condition
+result = calculation(100, 30)
+print("The result is", result)
 
 
-# changing the icon
-img = PhotoImage(file='/home/rajendiran/codes/logo.png')
-calculator.iconphoto(False,img)
+# Write a Python code to iterate the first 10 numbers, and in each iteration, 
+# print the sum of the current and previous number.
 
-microphone = tk.Label(search_bar, text='\U0001F3A4',font=("Arial", 10)).pack()
+print("Printing current and previous number and their sum in a range(10)")
+previous_num =0
 
-python3 flipkart.py
+# iterate first 10 numbers
+for i in range (1,11):
+    new_value = previous_num +i
+    print("current number",i, "previous number",previous_num, "sum:",new_value)
+
+    previous_num = i
+
+
+
+# Write a Python code to accept a string from the user and display characters present at an even index number.
+
+word = input('Enter a word ')
+print("orginal String is", word)
+
+size = len(word)
+
+print("Printing only even index chars")
+
+for i in range(0, size -1, 2):
+    print("index[", i, "]", word[i])
