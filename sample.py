@@ -42,4 +42,35 @@ size = len(word)
 print("Printing only even index chars")
 
 for i in range(0, size -1, 2):
-    print("index[", i, "]", word[i])
+    print(word[i])
+
+
+# Write a Python code to remove characters from a string from 0 to n and return a new string.
+
+def remove_characters(word, n):
+    print ("The actual word is",word)
+    x = word[n:]
+    return x
+
+print(remove_characters("rajendiran",5))
+
+
+# Write a Python code to remove characters from a string from 0 to n and return a new string.
+
+def value_check(numberlist):
+    print("given value is: ", numberlist)
+
+    first_num = numberlist[0]
+    last_num = numberlist[-1]
+
+    if first_num == last_num:
+        return True
+    else:
+        return False
+     
+
+numbers_x = [10, 20, 30, 40, 10]
+print("The result is", value_check(numbers_x))
+
+numbers_y = [70, 65, 35, 75, 50]
+print("The result is", value_check(numbers_y))

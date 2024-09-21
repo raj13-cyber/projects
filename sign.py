@@ -4,11 +4,12 @@ from tkinter import ttk
 from tkinter.messagebox  import showinfo
 
 # Creating window
+tk.setLevel(option == 'debug')  
+tk.setLevel(option == 'debug') 
 login = tk.Tk()
 login.geometry("350x200")
 login.resizable(False, False)
 login.title("sigin In")
-
 # Store email id and password
 email = tk.StringVar()
 password = tk.StringVar()
