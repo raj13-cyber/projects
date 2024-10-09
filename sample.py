@@ -1,3 +1,17 @@
+
+Recurrsion #function is calling itself
+
+def factorial(num):
+    if num == 0:
+        return 1
+    else:
+        return num *factorial(num-1)
+
+print(factorial(10))
+
+
+
+
 # Create a function that will take two numbers as parameters
 # Next, Inside a function, multiply two numbers and save their product in a product variable
 # Next, use the if condition to check if the product >1000. If yes, return the product
