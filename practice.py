@@ -1,11 +1,15 @@
-print("printing current and previous number sum in a range(10)")
 
-previous_num = 0
+# Create a class named Person, with firstname and lastname properties, and a printname method:
 
-# iterate first 10 numbers
+class person:
 
-for i in range (1,11):
-    new_value = previous_num+i
-    print("current number",i, "previous number",previous_num, "sum: ", new_value)
+    def __init__(self, fname, lname):
+        self.firstname = fname
+        self.lastname = lname
 
-    previous_num = i
+    def printname(self):
+        print(self.firstname, self.lastname)
+
+x = person("vijay", "antony")
+x.printname()
+
