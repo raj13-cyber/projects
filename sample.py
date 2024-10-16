@@ -1,3 +1,27 @@
+
+# add the __init__() function to the Student class:
+
+class student:
+     def __init__(self, fname, lname):
+       
+
+# Create a class named Person, with firstname and lastname properties, and a printname method:
+
+class person:
+
+    def __init__(self, fname, lname):
+        self.firstname = fname
+        self.lastname = lname
+
+    def printname(self):
+        print(self.firstname, self.lastname)
+
+class student(person):
+        pass
+
+x = student("vijay", "antony")
+x.printname()
+
 # Create a function that will take two numbers as parameters
 # Next, Inside a function, multiply two numbers and save their product in a product variable
 # Next, use the if condition to check if the product >1000. If yes, return the product
