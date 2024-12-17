@@ -3,6 +3,9 @@
 "Principal":[]"ranjith kumar"],
 "teachers":["raj kumar", "rajendiran","uma", "medona","parthiban"],
 "students":["velmurugan", "sakthivel", "subramani","ankit","roshan paul"],
-"address":["trichy"]
-
+"address":["trichy"],
+"name": ["Rajendiran"], 
+"age":["24"],
+"college":["chennai"],
+"birthdate":["13/12/1999"]
 }
